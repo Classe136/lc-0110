@@ -1,18 +1,30 @@
-/* general */
+/* Custom properties */
+:root {
+    /* Color Theme in Hex */
+    --lime-1-hex: #0E2618;
+    --lime-2-hex: #3FBF48;
+    --lime-3-hex: #8CBF3F;
+    --lime-4-hex: #bff272;
+    --lime-5-hex: #F2F2F2;
+    --contrast-light-color: #A63FBF;
+    --contrast-dark-color: #63466A;
+}
 
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Generics */
 body {
     font-family: "Roboto", sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 
-/* font */
+/* Fonts */
 .roboto-bold {
     font-family: "Roboto", sans-serif;
     font-weight: 700;
@@ -29,4 +41,83 @@ body {
     font-family: "Roboto", sans-serif;
     font-weight: 300;
     font-style: italic;
+}
+
+/* main */
+.wrapper {
+    border: 1px solid red;
+    height: 400px;
+    color: white;
+}
+
+header {
+    height: 200px;
+    background-color: var(--lime-1-hex);
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+li {
+    padding: 5px 10px;
+}
+
+/* Utility Flexbox */
+.d-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.content-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.box-1 {
+    background-color: var(--contrast-dark-color);
+    flex-basis: 200px;
+    height: 200px;
+}
+
+.box-2 {
+    background-color: var(--lime-1-hex);
+    width: 200px;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.box-3 {
+    background-color: var(--lime-2-hex);
+    flex-grow: 2;
+    order: -1;
+
+}
+
+.box-4 {
+    background-color: var(--contrast-light-color);
+    flex-grow: 1;
+    order: 2;
+}
+
+.box-5 {
+    background-color: var(--lime-4-hex);
+    flex-grow: 1;
 }
